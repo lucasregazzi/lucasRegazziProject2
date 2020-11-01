@@ -21,7 +21,7 @@
 
 <body>
 
-    <header class="blog">
+    <header class="contact">
         <nav>
             <ul>
                 <li><a href="/" title="index">Home</a></li>
@@ -35,34 +35,40 @@
             <img src="assets/contact-image-1.jpg" alt="A supine Sophie looks pensively into the camera.">
         </figure>
     </header>
+
+    <div class="block">
     
-    <h1 class="blog">Get in Touch</h1>
-    
-    <main class="blog">
-        <aside>
-            <div class="desc">
-                <ul class="social">
-                    <li><a href="http://facebook.com/sophie" target="_blank" title="Follow Sophie on Facebook!"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="http://twitter.com/sophie" target="_blank" title="Follow Sophie on Twitter!"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="http://linkedin.com/sophie" target="_blank" title="Follow Sophie on LinkedIn!"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="http://instagram.com/sophie" target="_blank" title="Follow Sophie on Instagram!"></a><i class="fab fa-instagram"></i></a></li>
-                </ul>
-                <p class="email"><a href="mailto:info@email.com" target="_blank" title="Shoot Sophie an Email!">info@email.com</a></p>
-                <p>123-456-7890<br>123 Queen St. West<br>Toronto, Ontario<br>Canada<br>M2P P2Z</p>
-            </div>
-        </aside>
-    
-        <section class="contact">
-            <fieldset class="contact">
-                <label for="name">Your name:</label>
-                <input type="text" class="name" id="name" placeholder="Your name">
-                <label for="email">Email address</label>
-                <input type="email" class="email" id="email" required="true" placeholder="Email address">
-                <label for="userContent">Your comment:</label>
-                <input type="text" class="userContent" id="userContent" placeholder="Put your comment here">
-                <button type="submit">Post Comment</button>
-            </fieldset>
-        </section>
+        <div class="wrapper contact">
+            <h1 class="contact">Get in Touch</h1>
+        </div>
+        
+        <main class="contact">
+            <aside>
+                <div class="desc">
+                    <ul class="social">
+                        <li><a href="http://facebook.com/sophie" target="_blank" title="Follow Sophie on Facebook!"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="http://twitter.com/sophie" target="_blank" title="Follow Sophie on Twitter!"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="http://linkedin.com/sophie" target="_blank" title="Follow Sophie on LinkedIn!"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="http://instagram.com/sophie" target="_blank" title="Follow Sophie on Instagram!"></a><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                    <p class="email"><a href="mailto:info@email.com" target="_blank" title="Shoot Sophie an Email!">info@email.com</a></p>
+                    <p>123-456-7890<br>123 Queen St. West<br>Toronto, Ontario<br>Canada<br>M2P P2Z</p>
+                </div>
+            </aside>
+        
+            <section class="contact">
+                <form class="contact">
+                    <label for="name" class="srOnly">Your name:</label>
+                    <input type="text" class="name" id="name" placeholder="Your name">
+                    <label for="email" class="srOnly">Email address</label>
+                    <input type="email" class="email" id="email" required="true" placeholder="Email address">
+                    <label for="userContent" class="srOnly">Your comment:</label>
+                    <textarea name="userContent" class="userContent" id="userContent" placeholder="Put your comment here"></textarea>
+                    <button class="click" type="submit">Post Comment</button>
+                </form>
+            </section>
+
+    </div>
 
     </main>
     

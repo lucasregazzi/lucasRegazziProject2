@@ -615,21 +615,25 @@ footer a {
   color: #f0efed;
 }
 
-header.blog {
+header.blog,
+header.contact {
   background-color: transparent;
   height: auto;
 }
 
-header.blog figure img {
+header.blog figure img,
+header.contact figure img {
   width: 100%;
 }
 
-header.blog nav {
+header.blog nav,
+header.contact nav {
   background-color: #f6a823;
   width: 100%;
 }
 
-header.blog nav ul {
+header.blog nav ul,
+header.contact nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,15 +646,18 @@ header.blog nav ul {
   text-transform: uppercase;
 }
 
-header.blog nav li {
+header.blog nav li,
+header.contact nav li {
   letter-spacing: 1px;
 }
 
-header.blog nav ul li a.onPage {
+header.blog nav ul li a.onPage,
+header.contact nav ul li a.onPage {
   color: #f0efed;
 }
 
-h1.blog::before {
+h1.blog::before,
+h1.contact::before {
   display: none;
 }
 
