@@ -433,9 +433,12 @@ main.about {
   background-color: #ffffff;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
 }
 
 .picturesAndText figure,
@@ -445,11 +448,22 @@ main.about {
 }
 
 .text {
+  position: relative;
   padding: 60px;
 }
 
 .text.two {
   text-align: right;
+}
+
+.text .wrap {
+  position: absolute;
+  width: 470px;
+  right: 70px;
+}
+
+.text.one .wrap {
+  left: 50px;
 }
 
 .picturesAndText figure.one {
@@ -498,6 +512,8 @@ figure.two img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .body p,
@@ -540,7 +556,7 @@ figure.two img {
 }
 
 .quickLinks ul {
-  padding-top: 20vh;
+  padding-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

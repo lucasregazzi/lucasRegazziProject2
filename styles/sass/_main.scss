@@ -19,7 +19,9 @@ main.about {
     display: flex;
     background-color: $white;
     flex-wrap: wrap;
-    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .picturesAndText figure,
@@ -29,11 +31,22 @@ main.about {
 }
 
 .text {
+    position: relative;
     padding: 60px;
 }
 
 .text.two {
     text-align: right;
+}
+
+.text .wrap {
+    position: absolute;
+    width: 470px;
+    right: 70px;
+}
+
+.text.one .wrap {
+    left: 50px;
 }
 
 .picturesAndText figure.one {
@@ -75,6 +88,8 @@ figure.two img {
     flex-wrap: wrap;
     padding: 80px;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .body p,
