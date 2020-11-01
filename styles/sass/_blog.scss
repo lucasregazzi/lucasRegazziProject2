@@ -32,3 +32,173 @@ header.blog nav ul li a.onPage {
 h1.blog::before {
     display: none;
 }
+
+.block {
+    margin-top: -8px;
+    background-color: $lightGrey;
+}
+
+.wrapper .blog {
+    position: relative;
+}
+
+h1.blog {
+    position: absolute;
+    top: -17px;
+    @include firstHeader(80px)
+}
+
+main.blog {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    padding-top: 100px;
+    flex-wrap: wrap;
+}
+
+main.blog aside {
+    width: 30%;
+}
+
+h4.sophie,
+.post h2 {
+    text-decoration: underline;
+}
+
+main.blog aside figure,
+main.blog aside h4,
+section.posts h2,
+section.posts p,
+.date {
+    margin-bottom: 20px;
+}
+
+section.posts h2 {
+    line-height: 40px;
+}
+
+.date {
+    font-style: italic;
+}
+
+section.comments .date,
+.author {
+    font-weight: bold;
+    color: $darkBlue;
+}
+
+main.blog aside li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+main.blog aside li:last-of-type,
+.post p:last-of-type {
+    margin: 0;
+}
+
+main.blog aside li::before{
+    content: "\2022";
+    color: $orange;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.desc,
+.recent,
+.post {
+    padding: 30px;
+    background-color: $offWhite;
+}
+
+.recent {
+    margin-top: 40px;
+}
+
+section.posts {
+    width: calc(70% - 40px);
+    margin-left: 40px;
+}
+
+main.blog aside figure img {
+    width: 100%;
+}
+
+.post figure {
+    float: left;
+    width: 10%;
+    margin-right: 20px;
+}
+
+.post .content {
+    float: right;
+    width: calc(90% - 20px);
+}
+
+.post figure img {
+    width: 100%;
+}
+
+.comments .post {
+    margin-top: 40px;
+}
+
+.comments .post:last-of-type {
+    border-bottom: 2px solid $orange;
+}
+
+section.posts fieldset {
+    margin: 40px 0;
+    padding: 0;
+    border: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
+}
+
+section.posts input {
+    font-family: 'Roboto', sans serif;
+    border: 0;
+    background-color: $offWhite;
+    padding: 20px;
+    color: $black;
+}
+
+section.posts input::placeholder {
+    font-style: italic;
+}
+
+section.posts input.email {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+section.posts input.name {
+    margin-right: 10px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+section.posts input.userContent {
+    margin: 10px 0;
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 2;
+}
+
+section.posts button {
+    grid-column: 1 / span 3;
+    grid-row: 5;
+    box-shadow: none;
+    border: none;
+}
+
+.click {
+    font-family: 'Roboto', sans serif;
+    color: $black;
+    background-color: $lightBlue;
+    text-transform: uppercase;
+    padding: 10px 0px;
+}

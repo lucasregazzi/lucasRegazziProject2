@@ -235,6 +235,11 @@ html {
   overflow: hidden;
 }
 
+input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans serif;
   font-size: 20px;
@@ -250,7 +255,7 @@ h4 {
   padding: 0;
 }
 
-h1 {
+h1.index {
   position: relative;
   font-size: 80px;
   font-family: 'Lora', serif;
@@ -259,7 +264,7 @@ h1 {
   text-transform: uppercase;
 }
 
-h1::before {
+h1.index::before {
   content: "";
   display: block;
   width: 200px;
@@ -299,7 +304,8 @@ h4 {
 
 ul,
 li,
-figure {
+figure,
+p {
   margin: 0;
   padding: 0;
 }
@@ -325,6 +331,12 @@ a {
 .emph:hover,
 .emph:focus {
   border: 2px solid #2c2c2c;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
@@ -640,4 +652,210 @@ header.blog nav ul li a.onPage {
 
 h1.blog::before {
   display: none;
+}
+
+.block {
+  margin-top: -8px;
+  background-color: #dcdcdc;
+}
+
+.wrapper .blog {
+  position: relative;
+}
+
+h1.blog {
+  position: absolute;
+  top: -17px;
+  font-size: 80px;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+main.blog {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.blog aside {
+  width: 30%;
+}
+
+h4.sophie,
+.post h2 {
+  text-decoration: underline;
+}
+
+main.blog aside figure,
+main.blog aside h4,
+section.posts h2,
+section.posts p,
+.date {
+  margin-bottom: 20px;
+}
+
+section.posts h2 {
+  line-height: 40px;
+}
+
+.date {
+  font-style: italic;
+}
+
+section.comments .date,
+.author {
+  font-weight: bold;
+  color: #285e64;
+}
+
+main.blog aside li {
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+main.blog aside li:last-of-type,
+.post p:last-of-type {
+  margin: 0;
+}
+
+main.blog aside li::before {
+  content: "\2022";
+  color: #f6a823;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.desc,
+.recent,
+.post {
+  padding: 30px;
+  background-color: #f0efed;
+}
+
+.recent {
+  margin-top: 40px;
+}
+
+section.posts {
+  width: calc(70% - 40px);
+  margin-left: 40px;
+}
+
+main.blog aside figure img {
+  width: 100%;
+}
+
+.post figure {
+  float: left;
+  width: 10%;
+  margin-right: 20px;
+}
+
+.post .content {
+  float: right;
+  width: calc(90% - 20px);
+}
+
+.post figure img {
+  width: 100%;
+}
+
+.comments .post {
+  margin-top: 40px;
+}
+
+.comments .post:last-of-type {
+  border-bottom: 2px solid #f6a823;
+}
+
+section.posts fieldset {
+  margin: 40px 0;
+  padding: 0;
+  border: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 10fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
+}
+
+section.posts input {
+  font-family: 'Roboto', sans serif;
+  border: 0;
+  background-color: #f0efed;
+  padding: 20px;
+  color: #2c2c2c;
+}
+
+section.posts input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+section.posts input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+section.posts input::-ms-input-placeholder {
+  font-style: italic;
+}
+
+section.posts input::placeholder {
+  font-style: italic;
+}
+
+section.posts input.email {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+section.posts input.name {
+  margin-right: 10px;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+section.posts input.userContent {
+  margin: 10px 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3 / span 2;
+}
+
+section.posts button {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  -ms-grid-row: 5;
+  grid-row: 5;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.click {
+  font-family: 'Roboto', sans serif;
+  color: #2c2c2c;
+  background-color: #05afc1;
+  text-transform: uppercase;
+  padding: 10px 0px;
 }

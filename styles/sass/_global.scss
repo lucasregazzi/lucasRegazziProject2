@@ -43,12 +43,12 @@ h4 {
     padding: 0;
 }
 
-h1 {
+h1.index {
     position: relative;
     @include firstHeader(80px)
 }
 
-h1::before {
+h1.index::before {
     content: "";
     display: block;
     width: 200px;
@@ -78,7 +78,8 @@ h4 {
 
 ul,
 li,
-figure {
+figure,
+p {
     margin: 0;
     padding: 0;
 }
@@ -106,4 +107,12 @@ a {
 .emph:hover,
 .emph:focus {
     border: 2px solid $black;
+}
+
+// Sophie's Design Infrastructure
+
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
