@@ -150,7 +150,7 @@ main.blog aside figure img {
     border-bottom: 2px solid $orange;
 }
 
-section.posts fieldset {
+section.posts form {
     margin: 40px 0;
     padding: 0;
     border: 0;
@@ -159,7 +159,8 @@ section.posts fieldset {
     grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
 }
 
-section.posts input {
+section.posts input,
+textarea.userContent {
     font-family: 'Roboto', sans serif;
     border: 0;
     background-color: $offWhite;
@@ -182,10 +183,12 @@ section.posts input.name {
     grid-row: 1 / span 2;
 }
 
-section.posts input.userContent {
+textarea.userContent {
     margin: 10px 0;
     grid-column: 1 / span 3;
     grid-row: 3 / span 2;
+    max-width: 100%;
+    resize: horizontal;
 }
 
 section.posts button {
