@@ -45,17 +45,20 @@ h1.contact::before {
     background-color: $lightGrey;
 }
 
-.wrapper .blog {
+.wrapper .blog,
+.wrapper .contact {
     position: relative;
 }
 
-h1.blog {
+h1.blog,
+h1.contact {
     position: absolute;
     top: -17px;
     @include firstHeader(80px)
 }
 
-main.blog {
+main.blog,
+main.contact {
     margin: 0 auto;
     width: 90%;
     max-width: 1200px;
@@ -64,7 +67,8 @@ main.blog {
     flex-wrap: wrap;
 }
 
-main.blog aside {
+main.blog aside,
+main.contact aside {
     width: 30%;
 }
 
@@ -125,7 +129,8 @@ main.blog aside li::before{
     margin-top: 40px;
 }
 
-section.posts {
+section.posts,
+section.contact {
     width: calc(70% - 40px);
     margin-left: 40px;
 }
@@ -157,7 +162,8 @@ main.blog aside figure img {
     border-bottom: 2px solid $orange;
 }
 
-section.posts form {
+section.posts form,
+section.contact form {
     margin: 40px 0;
     padding: 0;
     border: 0;
@@ -166,7 +172,12 @@ section.posts form {
     grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
 }
 
+section.contact form {
+    margin: 0 0 100px 0;
+}
+
 section.posts input,
+section.contact input,
 textarea.userContent {
     font-family: 'Roboto', sans serif;
     border: 0;
@@ -175,16 +186,19 @@ textarea.userContent {
     color: $black;
 }
 
-section.posts input::placeholder {
+section.posts input::placeholder,
+section.contact input::placeholder {
     font-style: italic;
 }
 
-section.posts input.email {
+section.posts input.email,
+section.contact input.email {
     grid-column: 2;
     grid-row: 1 / span 2;
 }
 
-section.posts input.name {
+section.posts input.name,
+section.contact input.name {
     margin-right: 10px;
     grid-column: 1;
     grid-row: 1 / span 2;
@@ -198,7 +212,8 @@ textarea.userContent {
     resize: horizontal;
 }
 
-section.posts button {
+section.posts button,
+section.contact button {
     grid-column: 1 / span 3;
     grid-row: 5;
     box-shadow: none;

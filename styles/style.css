@@ -666,11 +666,13 @@ h1.contact::before {
   background-color: #dcdcdc;
 }
 
-.wrapper .blog {
+.wrapper .blog,
+.wrapper .contact {
   position: relative;
 }
 
-h1.blog {
+h1.blog,
+h1.contact {
   position: absolute;
   top: -17px;
   font-size: 80px;
@@ -680,7 +682,8 @@ h1.blog {
   text-transform: uppercase;
 }
 
-main.blog {
+main.blog,
+main.contact {
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
@@ -692,7 +695,8 @@ main.blog {
       flex-wrap: wrap;
 }
 
-main.blog aside {
+main.blog aside,
+main.contact aside {
   width: 30%;
 }
 
@@ -753,7 +757,8 @@ main.blog aside li::before {
   margin-top: 40px;
 }
 
-section.posts {
+section.posts,
+section.contact {
   width: calc(70% - 40px);
   margin-left: 40px;
 }
@@ -785,7 +790,8 @@ main.blog aside figure img {
   border-bottom: 2px solid #f6a823;
 }
 
-section.posts form {
+section.posts form,
+section.contact form {
   margin: 40px 0;
   padding: 0;
   border: 0;
@@ -797,7 +803,12 @@ section.posts form {
       grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
 }
 
+section.contact form {
+  margin: 0 0 100px 0;
+}
+
 section.posts input,
+section.contact input,
 textarea.userContent {
   font-family: 'Roboto', sans serif;
   border: 0;
@@ -806,23 +817,28 @@ textarea.userContent {
   color: #2c2c2c;
 }
 
-section.posts input::-webkit-input-placeholder {
+section.posts input::-webkit-input-placeholder,
+section.contact input::-webkit-input-placeholder {
   font-style: italic;
 }
 
-section.posts input:-ms-input-placeholder {
+section.posts input:-ms-input-placeholder,
+section.contact input:-ms-input-placeholder {
   font-style: italic;
 }
 
-section.posts input::-ms-input-placeholder {
+section.posts input::-ms-input-placeholder,
+section.contact input::-ms-input-placeholder {
   font-style: italic;
 }
 
-section.posts input::placeholder {
+section.posts input::placeholder,
+section.contact input::placeholder {
   font-style: italic;
 }
 
-section.posts input.email {
+section.posts input.email,
+section.contact input.email {
   -ms-grid-column: 2;
   grid-column: 2;
   -ms-grid-row: 1;
@@ -830,7 +846,8 @@ section.posts input.email {
   grid-row: 1 / span 2;
 }
 
-section.posts input.name {
+section.posts input.name,
+section.contact input.name {
   margin-right: 10px;
   -ms-grid-column: 1;
   grid-column: 1;
@@ -851,7 +868,8 @@ textarea.userContent {
   resize: horizontal;
 }
 
-section.posts button {
+section.posts button,
+section.contact button {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / span 3;
@@ -868,4 +886,28 @@ section.posts button {
   background-color: #05afc1;
   text-transform: uppercase;
   padding: 10px 0px;
+}
+
+main.contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main.contact a i {
+  color: #f6a823;
+}
+
+main.contact a i:hover,
+main.contact a i:focus {
+  color: #285e64;
+}
+
+.desc p.email {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 20px 0px;
 }

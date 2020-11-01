@@ -1,0 +1,19 @@
+main.contact ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+main.contact a i {
+    color: $orange;
+}
+
+main.contact a i:hover,
+main.contact a i:focus {
+    color: $darkBlue;
+}
+
+.desc p.email {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 20px 0px;
+}
