@@ -1,0 +1,109 @@
+// Sophie's Colourway Legend
+
+$black: #2c2c2c;
+$orange: #f6a823;
+$darkBlue: #285e64;
+$lightGrey: #dcdcdc;
+$grey: #4f4f4f;
+$lightBlue: #05afc1;
+$red: #a82706;
+$offWhite: #f0efed;
+$white: #ffffff;
+
+// Sophie's Typography
+
+@mixin firstHeader($sizeValue) {
+    font-size: $sizeValue;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+@mixin allHeaders($sizeValue) {
+    font-size: $sizeValue;
+    font-family: 'Roboto', sans serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: 'Roboto', sans serif;
+    font-size: 20px;
+    line-height: 29px;
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    position: relative;
+    @include firstHeader(80px)
+}
+
+h1::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 130px;
+    background-image: url('./assets/circle-text.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -110px;
+    left: -50px;
+}
+
+h2 {
+    @include allHeaders(42px)
+}
+
+h3 {
+    @include allHeaders(32px)
+}
+
+h4 {
+    @include allHeaders(24px)
+}
+
+// Sophie's Lists and Figures
+
+ul,
+li,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+// Sophie's Anchors
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+.emph {
+    padding: 10px 25px;
+    background-color: $lightBlue;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid $lightBlue;
+}
+
+.emph:hover,
+.emph:focus {
+    border: 2px solid $black;
+}

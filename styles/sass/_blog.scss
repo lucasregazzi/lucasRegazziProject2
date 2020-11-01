@@ -1,0 +1,34 @@
+header.blog {
+    background-color: transparent;
+    height: auto;
+}
+
+header.blog figure img {
+    width: 100%;
+}
+
+header.blog nav {
+    background-color: $orange;
+    width: 100%;
+}
+
+header.blog nav ul {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    justify-content: space-between;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+header.blog nav li {
+    letter-spacing: 1px;
+}
+
+header.blog nav ul li a.onPage {
+    color: $offWhite;
+}
+
+h1.blog::before {
+    display: none;
+}

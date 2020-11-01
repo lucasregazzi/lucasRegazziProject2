@@ -1,0 +1,110 @@
+main.about {
+    background-color: $lightGrey;
+}
+
+.sophieStory {
+    padding: calc(20vh + 2px) 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sophieStory h2,
+.sophieStory p,
+.picturesAndText h3,
+.picturesAndText p {
+    margin-bottom: 40px;
+}
+
+.picturesAndText {
+    display: flex;
+    background-color: $white;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.picturesAndText figure,
+.text {
+    width: 50vw;
+    min-width: 675px;
+}
+
+.text {
+    padding: 60px;
+}
+
+.text.two {
+    text-align: right;
+}
+
+.picturesAndText figure.one {
+    background-color: $red;
+    text-align: right;
+    position: relative;
+    height: 400px;
+    top: -20px;
+}
+
+.picturesAndText figure.two {
+    background-color: $orange;
+    text-align: right;
+    position: relative;
+    height: 400px;
+    top: 40px;
+    order: 1;
+}
+
+figure.one img {
+    right: 20px;
+    top: -20px;
+}
+
+figure.two img {
+    left: -20px;
+    top: -20px;
+}
+
+figure.one img,
+figure.two img {
+    position: absolute;
+    max-width: 650px;
+    min-width: 450px;
+}
+
+.Journey {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px;
+    justify-content: center;
+}
+
+.body p,
+.body h2 {
+    margin-bottom: 40px;
+}
+
+.sophiesJourney p {
+    text-align: left;
+}
+
+.sophiesJourney figure {
+    width: 25%;
+    max-width: 250px;
+    padding-right: 60px;
+    position: relative;
+    justify-self: center;
+}
+
+.sophiesJourney figure img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    box-shadow: 20px 20px 0px $orange;
+}
+
+.sophiesJourney .body {
+    text-align: left;
+    width: calc(75% - 60px);
+    margin-left: 60px;
+}

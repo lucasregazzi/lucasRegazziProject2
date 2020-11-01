@@ -1,0 +1,60 @@
+// General Styles
+
+header {
+    width: 100vw;
+    height: 80vh;
+    background-color: $orange;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+// Navigation Styles
+
+header.index nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header.index nav ul  {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header.index nav li {
+    letter-spacing: 1px;
+}
+
+li.index {
+    @include firstHeader(2em);
+}
+
+nav li a:hover, 
+nav li a:active, 
+nav li a:focus {
+    color: $offWhite;
+}
+
+// Content Styles
+
+header.index figure {
+    height: 100%;
+    box-shadow: 20px 20px 0px $offWhite;
+    margin-top: 100px;
+}
+
+header.index figure img {
+    display: block;
+    height: 100%;
+}
