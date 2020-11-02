@@ -163,18 +163,17 @@ main.blog aside figure img {
     border-bottom: 2px solid $orange;
 }
 
-section.posts form,
-section.contact form {
-    margin: 40px 0;
-    padding: 0;
+form {
+    margin: 0;
+    padding: 40px 0 100px 0;
     border: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
 }
 
-section.contact form {
-    margin: 0 0 100px 0;
+form.contact {
+    padding-top: 0px;
 }
 
 section.posts input,
@@ -188,7 +187,8 @@ textarea.userContent {
 }
 
 section.posts input::placeholder,
-section.contact input::placeholder {
+section.contact input::placeholder,
+textarea::placeholder, {
     font-style: italic;
 }
 

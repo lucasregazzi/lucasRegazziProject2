@@ -216,6 +216,11 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  -webkit-transition: all ease .1s;
+  transition: all ease .1s;
+}
+
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
@@ -809,10 +814,9 @@ main.blog aside figure img {
   border-bottom: 2px solid #f6a823;
 }
 
-section.posts form,
-section.contact form {
-  margin: 40px 0;
-  padding: 0;
+form {
+  margin: 0;
+  padding: 40px 0 100px 0;
   border: 0;
   display: -ms-grid;
   display: grid;
@@ -822,8 +826,8 @@ section.contact form {
       grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
 }
 
-section.contact form {
-  margin: 0 0 100px 0;
+form.contact {
+  padding-top: 0px;
 }
 
 section.posts input,
@@ -837,22 +841,26 @@ textarea.userContent {
 }
 
 section.posts input::-webkit-input-placeholder,
-section.contact input::-webkit-input-placeholder {
+section.contact input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   font-style: italic;
 }
 
 section.posts input:-ms-input-placeholder,
-section.contact input:-ms-input-placeholder {
+section.contact input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   font-style: italic;
 }
 
 section.posts input::-ms-input-placeholder,
-section.contact input::-ms-input-placeholder {
+section.contact input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
   font-style: italic;
 }
 
 section.posts input::placeholder,
-section.contact input::placeholder {
+section.contact input::placeholder,
+textarea::placeholder {
   font-style: italic;
 }
 
@@ -1022,8 +1030,26 @@ main.contact a i:focus {
     display: none;
   }
   header.index nav.smaller,
-  header.blog nav.smaller {
+  header.blog nav.smaller,
+  header.contact nav.smaller {
     display: block;
+  }
+  form.comments,
+  form.contact {
+    display: block;
+  }
+  form.comments input,
+  form.comments textarea,
+  form.comments button,
+  form.contact input,
+  form.contact textarea,
+  form.contact button {
+    width: 100%;
+    display: block;
+  }
+  form.comments input.email,
+  form.contact input.email {
+    margin-top: 10px;
   }
 }
 
@@ -1034,7 +1060,8 @@ main.contact a i:focus {
   h1::before {
     opacity: 0;
   }
-  header.blog nav {
+  header.blog nav,
+  header.contact nav {
     background-color: transparent;
   }
   header.index {
@@ -1052,5 +1079,74 @@ main.contact a i:focus {
   .sophieStory {
     padding: 200px 60px;
     text-align: center;
+  }
+  main.contact {
+    display: block;
+  }
+  main.contact aside {
+    width: 100%;
+  }
+  main.contact section.contact {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  main.contact .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .desc p.email {
+    margin: 0 10px 0 0;
+  }
+  .desc p {
+    font-family: Lora;
+  }
+}
+
+@media (max-width: 800px) {
+  main.blog {
+    display: block;
+  }
+  main.blog aside {
+    width: 100%;
+  }
+  main.blog .desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .desc div {
+    padding-left: 20px;
+  }
+  section.posts {
+    width: 100%;
+    margin-left: 0;
+  }
+  .recent {
+    margin-bottom: 40px;
+  }
+  h1.contact,
+  h1.blog {
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  main.blog .desc {
+    display: block;
+  }
+  .desc figure {
+    width: 100%;
+    display: block;
+  }
+  .desc div {
+    padding: 0px;
+    width: 100%;
   }
 }
