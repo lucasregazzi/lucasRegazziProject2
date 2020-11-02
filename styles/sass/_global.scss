@@ -1,5 +1,3 @@
-// Sophie's Colourway Legend
-
 $black: #2c2c2c;
 $orange: #f6a823;
 $darkBlue: #285e64;
@@ -9,8 +7,6 @@ $lightBlue: #05afc1;
 $red: #a82706;
 $offWhite: #f0efed;
 $white: #ffffff;
-
-// Sophie's Typography
 
 @mixin firstHeader($sizeValue) {
     font-size: $sizeValue;
@@ -74,8 +70,6 @@ h4 {
     @include allHeaders(24px)
 }
 
-// Sophie's Lists and Figures
-
 ul,
 li,
 figure,
@@ -87,8 +81,6 @@ p {
 li {
     list-style: none;
 }
-
-// Sophie's Anchors
 
 a {
     text-decoration: none;
@@ -109,7 +101,9 @@ a {
     border: 2px solid $black;
 }
 
-// Sophie's Design Infrastructure
+button {
+    cursor: pointer;
+}
 
 .wrapper {
     width: 90%;
