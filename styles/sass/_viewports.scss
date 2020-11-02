@@ -17,7 +17,9 @@
         text-align: center;
     }
 
-    .text.one {padding-bottom: 80px;}
+    .text.one {
+        padding-bottom: 80px;
+    }
 
     .text.two {
         text-align: center;
@@ -97,6 +99,53 @@
         margin: 0;
         width: 100%;
         margin-top: 60px;
+    }
+
+    .sophiesJourney p {
+        text-align: center;
+    }
+    
+    header nav.desktop {
+        display: none;
+    }
+
+    header.index nav.smaller,
+    header.blog nav.smaller {
+        display: block;
+    }
+
+}
+
+@media (max-width: 960px) {
+    
+    li.index {
+        display: none;
+    }
+
+    h1::before {
+        opacity: 0;
+    }
+
+    header.blog nav {
+        background-color: transparent;
+    }
+
+    header.index {
+        position: relative;
+    }
+
+    header.index h1 {
+        position: absolute;
+        top: 100px;
+        color: $offWhite;
+        transform: rotate(-10deg);
+        font-size: 3em;
+        text-shadow: 2px 0px $black;
+    }
+
+    .sophieStory {
+        padding: 200px 60px;
+        text-align: center;
     }
 
 }

@@ -14,7 +14,9 @@ header {
 
 // Navigation Styles
 
-header.index nav {
+header.index nav,
+header.contact nav,
+header.blog nav {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,6 +24,12 @@ header.index nav {
     z-index: 2;
     text-align: center;
     text-transform: uppercase;
+}
+
+header.index nav.smaller,
+header.contact nav.smaller,
+header.blog nav.smaller {
+    display: none;
 }
 
 header.index nav ul  {
