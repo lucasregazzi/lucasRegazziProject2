@@ -1,0 +1,102 @@
+@media (max-width: 1350px) {
+
+    .picturesAndText {
+        display: block;
+        background-color: $white;
+    }
+
+    .picturesAndText figure,
+    .text {
+        min-width: 0px;
+        width: 100vw;
+    }
+
+    .text {
+        position: static;
+        padding: 60px;
+        text-align: center;
+    }
+
+    .text.one {padding-bottom: 80px;}
+
+    .text.two {
+        text-align: center;
+    }
+
+    .text .wrap {
+        position: static;
+        width: auto;
+    }
+
+    .picturesAndText figure.one {
+        background-color: $red;
+        height: auto;
+    }
+
+    .picturesAndText figure.two {
+        height: auto;
+        background-color: $orange;
+    }
+
+    .picturesAndText figure.one,
+    .picturesAndText figure.two {
+        position: static;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    figure.one img,
+    figure.two img {
+        position: static; 
+        width: 50%;
+        max-width: 1200px;
+        margin: -20px auto 0 auto;
+        min-width: 0px;
+    }
+
+
+}
+
+@media (max-width: 990px) {
+    
+    .quickLinks ul {
+        display: block;
+    }
+    
+    .quickLinks li {
+        width: 100%;
+    }
+
+    ul.socialMedia {
+        justify-content: space-evenly;
+    }
+
+    ul.socialMedia li:last-child {
+        display: none;
+    }
+
+    .journey {
+        display: block;
+    }
+
+    .sophiesJourney figure {
+        position: static;
+        display: block;
+        max-width: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .sophiesJourney figure img {
+        position: static;
+        min-width: 100px;
+    }
+
+    .sophiesJourney .body {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+}
